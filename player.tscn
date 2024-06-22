@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2c671muco8bu"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_j5drg"]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(17, 17)
+script = ExtResource("1_j5drg")
+
+[node name="Drill" type="Polygon2D" parent="."]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+rotation = -1.5708
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-10, 6, 0, 15, 10, 6, 0, 6)
+metadata/_edit_lock_ = true
+
+[node name="Body" type="Polygon2D" parent="."]
+color = Color(0.396078, 0.352941, 0.239216, 1)
+polygon = PackedVector2Array(6, -10, -14, -10, -14, 10, 6, 10)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -1)
+rotation = -1.5708
+polygon = PackedVector2Array(-7, 10, -1, 15, 5, 10, -1, 10)

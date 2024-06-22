@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1q5vf08bpeg4"]
+
+[node name="Terrain" type="Node2D"]
+
+[node name="Background" type="Polygon2D" parent="."]
+color = Color(0.45098, 0.364706, 0.219608, 1)
+polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
+
+[node name="Rock" type="Polygon2D" parent="."]
+color = Color(0.333333, 0.172549, 0.0431373, 1)
+polygon = PackedVector2Array(0, 31, 36, 31, 36, 0, 1152, 0, 1152, 648, 0, 648)
+
+[node name="Destructible" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Destructible"]
+visible = false
+polygon = PackedVector2Array(0, 31, 36, 31, 36, 0, 1152, 0, 1152, 648, 0, 648)

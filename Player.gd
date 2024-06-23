@@ -4,11 +4,10 @@ class_name Player
 @export var speed = 100
 @export var rotation_speed = 1
 
-var screen_size
 var rotation_direction = 0
 
-func _ready():
-	screen_size = get_viewport_rect().size
+func drill():
+	
 
 func get_input():
 	rotation_direction = Input.get_axis("left", "right")

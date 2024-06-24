@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Destructible/CollisionPolygon2D.polygon = $Polygon2D.polygon
+	$Destructible/CollisionPolygon2D.polygon = $Rock.polygon
 
 
 func clip(poly):
@@ -15,7 +15,7 @@ func clip(poly):
 		new_values.append(point+poly.global_position)
 	offset_poly.polygon = PackedVector2Array(new_values)
 	
-	var res = Geometry2D.clip_polygons($Polygon2D.polygon, offset_poly.polygon)
+	var res = Geometry2D.clip_polygons($Rock.polygon, offset_poly.polygon)
 	
-	$Polygon2D.polygon = res[0]
+	$Rock.polygon = res[0]
 	$Destructible/CollisionPolygon2D.set_deferred("polygon", res[0])

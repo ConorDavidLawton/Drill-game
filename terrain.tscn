@@ -6,15 +6,17 @@
 script = ExtResource("1_73o6u")
 
 [node name="Background" type="Polygon2D" parent="."]
-color = Color(0.45098, 0.364706, 0.219608, 1)
+z_index = -1
+color = Color(0.721569, 0.603922, 0.407843, 1)
 polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
 
 [node name="Rock" type="Polygon2D" parent="."]
+z_index = 1
 color = Color(0.333333, 0.172549, 0.0431373, 1)
-polygon = PackedVector2Array(0, 31, 36, 31, 36, 0, 1152, 0, 1152, 648, 0, 648)
+polygon = PackedVector2Array(0, 123, 83, 92, 105, 0, 1152, 0, 1152, 648, 0, 648)
 
-[node name="Destructible" type="StaticBody2D" parent="."]
+[node name="Destructible" type="StaticBody2D" parent="." groups=["Destructibles"]]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Destructible"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Destructible" groups=["Destructibles"]]
 visible = false
 polygon = PackedVector2Array(0, 31, 36, 31, 36, 0, 1152, 0, 1152, 648, 0, 648)

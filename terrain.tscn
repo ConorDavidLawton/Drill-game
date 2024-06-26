@@ -1,20 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1q5vf08bpeg4"]
+[gd_scene load_steps=2 format=3 uid="uid://c1q5vf08bpeg4"]
 
 [ext_resource type="Script" path="res://terrain.gd" id="1_73o6u"]
-[ext_resource type="PackedScene" uid="uid://daewrkb7n2037" path="res://map.tscn" id="2_0s0w6"]
 
 [node name="Terrain" type="Node2D"]
 script = ExtResource("1_73o6u")
 
-[node name="Background" type="Polygon2D" parent="."]
-z_index = -1
-color = Color(0.721569, 0.603922, 0.407843, 1)
-polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
-
-[node name="Rock" parent="." instance=ExtResource("2_0s0w6")]
-
 [node name="Destructible" type="StaticBody2D" parent="." groups=["Destructibles"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Destructible" groups=["Destructibles"]]
-visible = false
-polygon = PackedVector2Array(0, 31, 36, 31, 36, 0, 1152, 0, 1152, 648, 0, 648)
+polygon = PackedVector2Array(0, 123, 83, 92, 105, 0, 1152, 0, 1152, 648, 0, 648)

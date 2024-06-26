@@ -12,7 +12,7 @@ func clip(poly):
 	
 	var new_values = []
 	for point in poly.polygon:
-		new_values.append(point+poly.global_position)
+		new_values.append((poly.global_transform * point))
 	offset_poly.polygon = PackedVector2Array(new_values)
 	
 	var res = Geometry2D.clip_polygons($Rock.polygon, offset_poly.polygon)

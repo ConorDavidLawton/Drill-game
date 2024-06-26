@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://daewrkb7n2037"]
+
+[node name="Rock" type="Polygon2D"]
+z_index = 1
+color = Color(0.333333, 0.172549, 0.0431373, 1)
+polygon = PackedVector2Array(0, 123, 83, 92, 105, 0, 1152, 0, 1152, 648, 0, 648)

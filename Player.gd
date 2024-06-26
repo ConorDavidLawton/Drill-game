@@ -1,8 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
-@export var speed = 100
-@export var rotation_speed = 1
+@export var speed = 50
+@export var rotation_speed = 0.6
 
 var rotation_direction = 0
 var object_hit
@@ -23,5 +23,4 @@ func _physics_process(delta):
 func _on_drill_detection_body_entered(body: Node) -> void:
 	if body.is_in_group("Player"): return
 	object_hit = body
-	print("Drilling")
 	drill()

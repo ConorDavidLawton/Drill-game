@@ -21,6 +21,9 @@ metadata/_edit_lock_ = true
 [node name="CollisionDetection" type="CollisionPolygon2D" parent="." groups=["Player"]]
 polygon = PackedVector2Array(-14, -10, 6, -10, 15, 0, 6, 10, -14, 10)
 
+[node name="Camera2D" type="Camera2D" parent="." groups=["Player"]]
+zoom = Vector2(2, 2)
+
 [node name="Drill detection" type="Area2D" parent="." groups=["Player"]]
 
 [node name="CollisionPoly" type="CollisionPolygon2D" parent="Drill detection" groups=["Player"]]

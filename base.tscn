@@ -38,3 +38,8 @@ shape = SubResource("WorldBoundaryShape2D_rpelm")
 position = Vector2(1150, 300)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_rpelm")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = -2
+color = Color(0.235294, 0.0862745, 0.0431373, 1)
+polygon = PackedVector2Array(-477, -327, 1618, -321, 1615, 1114, -468, 1099)

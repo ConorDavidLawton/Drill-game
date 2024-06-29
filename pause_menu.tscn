@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvuspw70tnamv"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_a26j3"]
+
+[node name="Pause" type="Node2D"]
+visible = false
+script = ExtResource("1_a26j3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="PopupMenu" parent="CanvasLayer"]
+title = "Paused"
+position = Vector2i(325, 50)
+size = Vector2i(500, 550)
+item_count = 1
+item_0/text = "Paused"
+item_0/id = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control"]
+visible = false
+custom_minimum_size = Vector2(350, 100)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.5
+offset_right = -76.5
+offset_bottom = 550.0
+grow_horizontal = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/PanelContainer"]
+visible = false
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2

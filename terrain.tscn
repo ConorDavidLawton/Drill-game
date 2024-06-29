@@ -5,6 +5,11 @@
 [node name="Terrain" type="Node2D"]
 script = ExtResource("1_73o6u")
 
+[node name="Rock" type="Polygon2D" parent="."]
+z_index = 1
+color = Color(0.333333, 0.172549, 0.0431373, 1)
+polygon = PackedVector2Array(0, 123, 83, 92, 105, 0, 1150, 0, 1150, 650, 0, 650)
+
 [node name="Destructible" type="StaticBody2D" parent="." groups=["Destructibles"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Destructible" groups=["Destructibles"]]

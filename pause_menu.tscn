@@ -3,32 +3,51 @@
 [ext_resource type="Script" path="res://pause_menu.gd" id="1_a26j3"]
 
 [node name="Pause" type="Node2D"]
-visible = false
+process_mode = 3
 script = ExtResource("1_a26j3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
-[node name="Control" type="PopupMenu" parent="CanvasLayer"]
-title = "Paused"
-position = Vector2i(325, 50)
-size = Vector2i(500, 550)
-item_count = 1
-item_0/text = "Paused"
-item_0/id = 0
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control"]
-visible = false
-custom_minimum_size = Vector2(350, 100)
-anchors_preset = 5
+[node name="Control" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -576.5
-offset_right = -76.5
-offset_bottom = 550.0
+anchor_bottom = 0.5
+offset_left = -285.5
+offset_top = -287.5
+offset_right = 285.5
+offset_bottom = 287.5
 grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/PanelContainer"]
-visible = false
+[node name="PanelContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+z_index = 2
+custom_minimum_size = Vector2(450, 400)
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="CanvasLayer/Control/PanelContainer"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
+text = "Resume"
+
+[node name="Settings" type="Button" parent="CanvasLayer/Control/PanelContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+text = "Settings"
+
+[node name="Main menu" type="Button" parent="CanvasLayer/Control/PanelContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+text = "Main menu"
+
+[node name="Exit game" type="Button" parent="CanvasLayer/Control/PanelContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+text = "Exit game"
+
+[connection signal="pressed" from="CanvasLayer/Control/PanelContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/PanelContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/PanelContainer/Main menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/PanelContainer/Exit game" to="." method="_on_exit_game_pressed"]

@@ -15,7 +15,7 @@ func _on_drill_detection_body_entered(body: Node) -> void:
 func drill():
 	if object_hit.is_in_group("Destructibles"):
 		object_hit.get_parent().clip($"DestructionArea/DestructionPoly")
-		get_node("/root/Main/Headsup").update_dirt()
+		get_node("/root/Game/Headsup").update_dirt()
 
 func get_input():
 	rotation_direction = Input.get_axis("left", "right")

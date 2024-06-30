@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://d28evskcsffxt"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_n2ibb"]
+
+[node name="Main menu" type="Node2D"]
+script = ExtResource("1_n2ibb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(400, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -15.5
+offset_right = 44.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+action_mode = 0
+text = "Play game"
+
+[connection signal="pressed" from="CanvasLayer/CenterContainer/Play" to="." method="_on_play_pressed"]
